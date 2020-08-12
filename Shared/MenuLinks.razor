@@ -1,0 +1,26 @@
+﻿@using Resume2020.Data
+@using Resume2020.Models
+
+    <div id='menu-large'>
+        |
+        @foreach (var anchor in Anchors.AnchorList)
+        {
+            tag = $"#{@anchor.Tag}";
+            <AnchorTag href='@tag'>@anchor.Caption</AnchorTag>@sep
+        }
+    </div><div id='menu-small'><img class='link' onclick='showMenu();' src='images/menu-minimized.png'></div>
+
+
+@code {
+    [Parameter]
+    public Anchors Anchors { get; set; }
+
+    string sep = " | ";
+    string tag;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        
+    }
+}

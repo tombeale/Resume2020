@@ -1,0 +1,72 @@
+﻿@page "/"
+@using Resume2020.Data
+<div id="top" class="content">
+    <img id="top-image" class="page-background web-only" style="top: 60px;" src="images/circuitboard01.jpg">
+    <div id="main-page">
+        <div class="over-photo web-only">
+            <div class="headline center">
+                Software Development
+                <div class="sub-head center">
+                    C#, Entity Framework, LINQ, <nobr>SQL, Visual Basic</nobr>
+                </div>
+                <p>Web Development</p>
+                <div class="sub-head center">
+                    JavaScript, JQuery, HTML5, CSS3, ASP.Net, ASP.Net MVC, <nobr>VBScript, PHP</nobr>
+                </div>
+            </div>
+        </div>
+        <div id="main-page-body">
+            <Divider Caption="Personal" />
+            <PersonalContent />
+
+            <Divider Caption="Skill Set" Tag="skills" Anchors="@Anchors" />
+            <SkillSet />
+
+            <Divider Caption="History" Tag="experience" Anchors="@Anchors" />
+            <ExperienceContent />
+
+            <Divider Caption="Education" Tag="education" Anchors="@Anchors" />
+            <Education />
+
+            <Divider Caption="Military" Tag="military" Anchors="@Anchors" />
+            <Military />
+
+            <Divider Caption="Contact" Tag="contact" Anchors="@Anchors" />
+            <Contact />
+
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+        </div>
+    </div>
+    <div id="main-nav" class="main-nav left web-only">
+        <a href="#top"><img id="main-nav-logo" class="nav-logo" src="images/TomBeale02.png" /></a>
+        <div id="menu" class="menusec"><MenuLinks Anchors="@Anchors" /></div>
+    </div>
+</div>
+<div id="responsive-menu"></div>
+
+@code {
+
+    protected Anchors Anchors = new Anchors();
+
+    /* *******************************************************************
+    Life Cycle Events
+    ****************************************************************** */
+
+    protected override void OnInitialized()
+    {
+        Anchors.Add("Home", "top");
+    }
+
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+    }
+
+}

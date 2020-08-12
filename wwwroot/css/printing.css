@@ -1,0 +1,26 @@
+﻿.print-only {
+    display: none;
+}
+
+.web-only {
+
+}
+
+
+
+
+@media print {
+
+    .print-only {
+        display: block;
+    }
+
+    .web-only {
+        display: none;
+    }
+
+    #main-page-body {
+        top: 0;
+    }
+
+}

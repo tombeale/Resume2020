@@ -1,0 +1,347 @@
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.no-underline:hover {
+	text-decoration: none;
+}
+
+
+b.inline-head {
+	font-size: 150%;
+}
+
+body {
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	font-size:   10pt;
+	padding:     0;
+	margin:      0;
+	text-align:  center;
+	background-color: black;
+}
+
+div {
+	box-sizing:     border-box;
+	text-align:     left;
+	vertical-align: top;
+	/*  
+		border: 1px solid #aaf;
+	*/
+}
+
+div.company-overview {
+	margin: .7em 0 .7em 0; 
+}
+
+div.content {
+	width:     100%;
+	max-width: 1060px;
+}
+
+div.divider {
+	display:           block;
+	font-size:         120%;
+	font-weight:       bold;
+	color:             #4f0005;
+	position:          static;
+	margin:            3em 0 1em 0;
+	width:             100%;
+	text-align:        left;
+	border-top:        1px solid black;
+	background-image:  url(../images/division-shadow.png);
+	background-repeat: no-repeat;
+	padding:           0 0 0 20px;
+	min-height:        30px;
+}
+
+div.no-top-margin {
+	margin:            0em 0 1em 0;
+}
+
+div.headline {
+	position:           relative;
+	font-weight:        normal;
+	font-size:          200%;
+	margin:             0;
+	top:                160px;
+	-webkit-transition: font-size .5s; 
+	-moz-transition:    font-size .5s; 
+	-ms-transition:     font-size .5s; 
+	-o-transition:      font-size .5s; 
+	transition:         font-size .5s;  
+}
+
+div.horiz-photo {
+	border:       1px solid black;
+	border-style: solid none;
+	text-align:   center;
+	margin:       20px 0;
+	padding-top:  3px;
+}	
+
+div.main-nav {
+	height:             60px;
+	-webkit-transition: height .5s; 
+	-moz-transition:    height .5s; 
+	-ms-transition:     height .5s; 
+	-o-transition:      height .5s; 
+	transition:         height .5s;  
+}
+
+div.main-nav-reduced {
+	height:             37px;
+	-webkit-transition: height .5s; 
+	-moz-transition:    height .5s; 
+	-ms-transition:     height .5s; 
+	-o-transition:      height .5s; 
+	transition:         height .5s;  
+}
+
+div.menusec {
+	position:           fixed;
+	top:                20px;
+	right:              10px;
+	font-size:          10pt;
+	-webkit-transition: top .5s; 
+	-moz-transition:    top .5s; 
+	-ms-transition:     top .5s; 
+	-o-transition:      top .5s; 
+	transition:         top .5s;  
+}
+	
+div.menusec-reduced {
+	top: 10px;
+}
+
+div.multi-column {
+	column-count: 3;
+	padding-top:  10px;
+}
+
+div.over-photo {
+	text-align: center;
+	color:      white;
+	padding:    0;
+	height:     600px;
+}
+
+div.placeholder {
+	display: inline-block;
+	width: 20%;
+}
+
+div.section {
+	padding-top: 15px;
+	overflow: visible;
+	text-align: left;
+}
+
+div.section-left {
+	display: inline-block;
+	text-align: right;
+	width: 60%;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 2em;
+}
+div.section-right {
+	display: inline-block;
+	text-align: right;
+	width: 39%;
+	padding-right: 15px;
+}
+
+
+div.section-title {
+	display: inline-block;
+	text-align: right;
+	width: 20%;
+	font-weight: bold;
+}
+div.section-content {
+	display: inline-block;
+	text-align: left;
+	width: 69%;
+	padding-left: 10px;
+}
+
+
+div.sub-head {
+	font-size:   50%;
+	line-height: 150%;
+	position:    relative;
+}
+
+div.table {
+	vertical-align: top;
+	width:          100%;
+}
+
+img.border {
+	border: 1px solid black;
+}
+
+img.border-off {
+	border: none;
+}
+
+img.page-background {
+	position:  fixed;
+	top:       0;
+	left:      0;
+	max-width: 100%;
+}
+
+img.nav-logo {
+	margin-top:         5px;
+	width:              300px;
+	-webkit-transition: width .5s; 
+	-moz-transition:    width .5s; 
+	-ms-transition:     width .5s; 
+	-o-transition:      width .5s; 
+	transition:         width .5s; 
+}
+
+img.nav-logo-reduced {
+	margin-top: 0px;
+	width:      175px;
+}
+
+p {
+	padding: 0;
+	margin: .3em 0 0 0;
+}
+
+p.job-title {
+	margin: 0;
+	font-weight: normal;
+}
+
+p.job-dates {
+	margin: 0;
+	font-weight: normal;
+	font-size: 75%;
+}
+
+span.divider-caption {
+	font-size:   120%;
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr.menurow:hover {
+	background-color: #eeeeff;
+}
+
+td.menucell {
+	font-size:   150%;
+	padding:     2px 35px;
+	font-weight: bold;
+	width:       100%;
+	border:      1px solid #ddd;
+}
+
+ul {
+	margin-top: 0;
+	list-style-image: url('../images/sq-bul-9.png');
+}
+
+li {
+	margin-bottom: .7em;
+}
+
+#background-x {
+	width:  100%;
+	height: 100%;
+}
+
+#headline {
+	-webkit-transition: font-size .5s; 
+	-moz-transition:    font-size .5s; 
+	-ms-transition:     font-size .5s; 
+	-o-transition:      font-size .5s; 
+	transition:         font-size .5s;  
+}
+
+#main-page {
+	position: absolute;
+	width:    100%;
+	top:      0;
+	left:     0;
+}
+
+#main-nav {
+	position:         fixed;
+	background-color: #fff;
+	width:            100%;
+	padding:          .5em;
+	border-bottom:    1px solid black;
+}
+
+#menu-small {
+	display: none;
+}
+	
+#main-page-body {
+	position:           absolute;
+	width:              100%;
+	top:                500px;
+	left:               0;
+	background-color:   white;
+	margin:             0;
+	padding:            0;
+	-webkit-transition: top .5s; 
+	-moz-transition:    top .5s; 
+	-ms-transition:     top .5s; 
+	-o-transition:      top .5s; 
+	transition:         top .5s;  
+}
+
+#responsive-menu {
+	display:  none;
+	position: fixed;
+	width:    100%;
+	top:      0;
+	left:     0;
+	background-color: white;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.no-top-margin {
+	margin-top: 0;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.red {
+	color: red;
+}

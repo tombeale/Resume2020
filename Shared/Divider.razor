@@ -1,0 +1,49 @@
+﻿@using Resume2020.Data
+@using Resume2020.Models
+
+@if (!String.IsNullOrEmpty(Tag))
+{
+    <p id="@Tag">&nbsp;</p>
+    <div class="@Class">@Caption</div>
+}
+else
+{
+    <div class="@Class">@Caption</div>
+}
+
+@code {
+    [Parameter]
+    public string Caption { get; set; }
+
+    [Parameter]
+    public string Tag { get; set; }
+
+    [Parameter]
+    public Anchors Anchors { get; set; }
+
+
+    [Parameter]
+    public string Class { get; set; } = "divider";
+
+    string DivId, DivIdLink;
+
+
+    /* *******************************************************************
+        Life Cycle Events
+    ******************************************************************* */
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        if (!String.IsNullOrEmpty(Tag))
+        {
+            Anchors.Add(Caption, Tag);
+        }
+        else
+        {
+            Class = $"{Class} no-top-margin";
+        }
+        DivId = $"div-{Tag}";
+        DivIdLink = $"#div-{Tag}";
+    }
+
+}
