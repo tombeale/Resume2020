@@ -342,6 +342,10 @@ li {
 	cursor: pointer;
 }
 
+.link:hover {
+	color: blue;
+}
+
 .red {
 	color: red;
 }

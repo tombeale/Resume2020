@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resume2020", "Resume2020.csproj", "{D592084A-1EAA-4C1C-B514-A3813669D2B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume2020", "Resume2020.csproj", "{D592084A-1EAA-4C1C-B514-A3813669D2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

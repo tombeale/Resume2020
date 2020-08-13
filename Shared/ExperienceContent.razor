@@ -1,4 +1,5 @@
-﻿<!-- ------------------------------- SWBC Corporation -->
+﻿@inject IJSRuntime JsRuntime
+<!-- ------------------------------- SWBC Corporation -->
 <div class='section'>
     <div class='section-left'>
         SouthWest Business Corporation (SWBC)<br>
@@ -14,12 +15,11 @@
     <div class='section-content'>
         <div class='company-overview'>
             SouthWest Business Corporation provides insurance tracking for the insurance industry.
-            I worked for the SureTrack group in Tigard as a full-time application engineer until the company closed the Portland office in October of 2019. 
-            Following that, my group continued worked from home, assisting in support of several applications. I retired at the end of June, 2020. 
-            
+            I worked for the SureTrack group in Tigard as a full-time application engineer until the company closed the Portland office in October of 2019.
+            Following that, my group continued worked from home, assisting in support of several applications. I retired at the end of June, 2020.
         </div>
         <ul>
-            <li>
+            <li class="lang-tags">
                 While working at SWBC I worked extensively in .Net MVC, C#, Git, Angular, TypeScript and JavaScript.
             </li>
         </ul>
@@ -54,7 +54,7 @@
             <li>
                 I improved the performance of stored procedures used to validate document data before generating output.
             </li>
-            <li>
+            <li class="lang-tags">
                 I was instrumental in uplifting legacy applications to modern technologies (VB6 to C#)
             </li>
         </ul>
@@ -80,7 +80,7 @@
             Genesis Financial Solutions provides consumer credit and loan services for branded credit card.
         </div>
         <ul>
-            <li>
+            <li class="lang-tags">
                 Worked under contract for three months in their IT department doing full-stack development in C#/ASP.Net MVC, SQL Server,
                 and Razor templates using Bootstrap. Projects included writing utility functions for document extraction and manipulating
                 dialer files, modifying call-center MVC applications and making changes to Stored Procedures.
@@ -108,7 +108,7 @@
             Innovation Asset Group provides a web-based application for managing trademark, copyright and <nobr>patent data.</nobr>
         </div>
         <ul>
-            <li>
+            <li class="lang-tags">
                 Principal focus was ongoing development of the core product, a web-based application for Intellectual Property management.
                 This included JavaScript, HTML5, CSS3, AJAX, ASP, ASPX, C#, VB.Net, SQL (SQL Server and MySQL) and VB6
             </li>
@@ -116,7 +116,7 @@
                 Integrated IP Forecaster into the core product UI. This involved creating a .Net API to assemble calls
                 in JSON plus retrieving and displaying data from a RESTful back-end service.
             </li>
-            <li>
+            <li class="lang-tags">
                 Created multiple UIs around a Java-based reporting engine. These included Faceted Search and a
                 more advanced interface for designing complex queries. Communication to the back end was
                 accomplished by sending and receiving JSON packages through AJAX calls to a RESTful service.
@@ -157,7 +157,7 @@
             Corillian Corporation (now Fiserv) produces and maintains online banking sites
         </div>
         <ul>
-            <li>
+            <li class="lang-tags">
                 Responsibilities included complete implementations of online banking sites for small banks and credit
                 unions, using combinations of ASP, JavaScript, XML/XSLT, CSS, ODBC, SQL, Visual Basic and HTML.
             </li>
@@ -225,5 +225,13 @@
 </div>
 
 @code {
+    async Task ResolveTags()
+    {
+        await JsRuntime.InvokeVoidAsync(identifier: "resolveTags");
+    }
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await ResolveTags();
+    }
 }
