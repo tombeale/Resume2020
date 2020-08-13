@@ -36,13 +36,9 @@
         string href = null;
         if (this.Attributes.ContainsKey("href"))
         {
-            // If the href attribute has been specified, we examine the value of it. If if starts with '#'
-            // we assume the rest of the value contains the ID of the element the link points to.
             href = $"{this.Attributes["href"]}";
             if (href.StartsWith("#"))
             {
-                // If the href contains an anchor link we don't want the default click action to occur, but
-                // rather take care of the click in our own method.
                 this.targetId = href.Substring(1);
                 this.preventDefault = true;
             }
@@ -54,8 +50,6 @@
     {
         if (!string.IsNullOrEmpty(this.targetId))
         {
-            // If the target ID has been specified, we know this is an anchor link that we need to scroll
-            // to, so we call the JavaScript method to take care of this for us.
             await this.JsInterop.InvokeVoidAsync("anchorLink.scrollIntoView", this.targetId);
         }
     }
