@@ -1,0 +1,52 @@
+﻿@layout TechLayout
+@page "/LangDetails/{Tag}"
+@using Resume2020.Data
+@using Resume2020.Models
+
+@inject IJSRuntime JsRuntime
+
+
+@if (TechData != null)
+{
+    <div class="tech-body">
+        @foreach (var para in Paras)
+        {
+            <TechParagraph Text="@para" />
+        }
+
+    </div>
+}
+else
+{
+    <b>No Details Found</b>
+}
+
+@code {
+    [Parameter]
+    public string Tag { get; set; }
+
+    protected TechItem TechData;
+    protected List<string> Paras;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        var Data = new TechnologyData(@"wwwroot\scripts\Techologies.json");
+        TechData = Data.Technologies.Where(t => t.Key.ToLower() == Tag.ToLower()).FirstOrDefault();
+
+        if (!String.IsNullOrEmpty(TechData?.Text)) Paras = TechData.Text.Split("<p>").ToList();
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        string Title = (TechData != null) ? TechData.Name : "Not Found";
+
+        await SetTitle(Title);
+    }
+
+    protected async Task SetTitle(string title)
+    {
+        await JsRuntime.InvokeVoidAsync(identifier: "setTitle", title);
+    }
+}

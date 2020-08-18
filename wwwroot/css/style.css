@@ -342,7 +342,12 @@ li {
 	cursor: pointer;
 }
 
-.link:hover {
+.lang-link {
+	cursor: pointer;
+	color: #6d7c98;
+}
+
+.lang-link:hover {
 	color: blue;
 }
 

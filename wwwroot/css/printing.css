@@ -6,7 +6,9 @@
 
 }
 
+.keep-together {
 
+}
 
 
 @media print {
@@ -15,12 +17,39 @@
         display: block;
     }
 
+    .placeholder {
+        page-break-after: avoid;
+    }
+    
+    .section {
+        page-break-before: avoid;
+    }
+
+    .page-break {
+        break-before: always;
+    }
+
+    .keep-together {
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+
+    div.section {
+        page-break-before: avoid;
+    }
+
+    .divider {
+        page-break-after: avoid;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     .web-only {
         display: none;
     }
 
     #main-page-body {
-        top: 0;
+        top: .5in;
     }
 
 }

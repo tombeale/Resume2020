@@ -1,5 +1,7 @@
 ﻿@page "/"
 @using Resume2020.Data
+@using Resume2020.Models
+
 <div id="top" class="content">
     <img id="top-image" class="page-background web-only" style="top: 60px;" src="images/circuitboard01.jpg">
     <div id="main-page">
@@ -11,18 +13,19 @@
                 </div>
                 <p>Web Development</p>
                 <div class="sub-head center">
-                    JavaScript, JQuery, HTML5, CSS3, ASP.Net, ASP.Net MVC, <nobr>VBScript, PHP</nobr>
+                    JavaScript, JQuery, HTML5, CSS3, ASP.Net, ASP.Net MVC, <nobr>Core, Blazor, VBScript</nobr>
                 </div>
             </div>
         </div>
         <div id="main-page-body">
-            <Divider Caption="Personal" />
+            <Divider Caption="Personal" Class="web-only divider" />
+            <PrintHeading />
             <PersonalContent />
 
             <Divider Caption="Skill Set" Tag="skills" Anchors="@Anchors" />
             <SkillSet />
 
-            <Divider Caption="History" Tag="experience" Anchors="@Anchors" />
+            <Divider Caption="History" Tag="experience" Anchors="@Anchors" Class="page-break divider" />
             <ExperienceContent />
 
             <Divider Caption="Education" Tag="education" Anchors="@Anchors" />
@@ -52,6 +55,7 @@
 @code {
 
     protected Anchors Anchors = new Anchors();
+
 
     /* *******************************************************************
     Life Cycle Events

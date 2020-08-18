@@ -11,7 +11,7 @@ function showTagWindow(tag) {
 
 function TagList(data) {
     this.list = data;
-    this.template = "<span class='link' onclick=\"showTagWindow('#T#')\" title='More details on my #T# experience'>#T#</span>";
+    this.template = "<span class='lang-link' onclick=\"showTagWindow('#T#')\" title='More details on my #T# experience'>#N#</span>";
 }
 
 TagList.prototype.resolve = function () {
@@ -21,12 +21,18 @@ TagList.prototype.resolve = function () {
     });
 }
 
+TagList.prototype.genTag = function (name) {
+    return "k-" + name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+}
+
 TagList.prototype.resolveElement = function (element) {
     var text = $(element).html();
     for (let a in this.list) {
-        let tag = this.list[a];
+        let name = this.list[a];
+        let tag  = techKeyMap[name];
         let tooltip = this.template.replace(/#T#/g, tag);
-        text = text.replace(tag, tooltip);
+        tooltip = tooltip.replace(/#N#/g, name);
+        text = text.replace(name, tooltip);
     }
     $(element).html(text)
 }

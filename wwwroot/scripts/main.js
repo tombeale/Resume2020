@@ -53,3 +53,9 @@ window.anchorLink = {
 		}
 	}
 }
+
+function setTitle(title) {
+	var element = document.getElementById("tech-title")
+	element.innerHTML = title;
+}
+
