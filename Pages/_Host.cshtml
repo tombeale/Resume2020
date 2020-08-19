@@ -23,19 +23,21 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/titlepos.js"></script>
     <script src="scripts/responsive.js"></script>
-    <script src="scripts/tagdata.js"></script>
+    <!-- script src="scripts/tagdata.js"></!-script -->
     <script src="scripts/taglist.js"></script>
     <script src="scripts/TechMap.js"></script>
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script>
         var menuData = "@ResponsiveData";
         var techKeyMap = {};
+        var tagData = [];
 
         $(document).ready(function () {
-            // --- this maps link names in the text to entries in the data store 
+            // --- this maps link names in the text to entries in the data store
             for (a in techMapData) {
                 let d = techMapData[a];
                 techKeyMap[d.Name] = d.Tag;
+                tagData.push(techMapData[a].Name);
             }
         });
 

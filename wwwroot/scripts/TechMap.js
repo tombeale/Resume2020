@@ -26,13 +26,8 @@ var techMapData = [
   },
   {
     "Id": 75,
-    "Name": ".Net API",
+    "Name": ".Net WebAPI",
     "Tag": "api"
-  },
-  {
-    "Id": 76,
-    "Name": "ASP (Classic)",
-    "Tag": "asp"
   },
   {
     "Id": 77,
@@ -147,6 +142,36 @@ var techMapData = [
   {
     "Id": 99,
     "Name": "Entity Framework (EF)",
-    "Tag": null
+    "Tag": "ef"
+  },
+  {
+    "Id": 102,
+    "Name": "ASP (Classic)",
+    "Tag": "asp"
+  },
+  {
+    "Id": 103,
+    "Name": ".Net WebAPI",
+    "Tag": "api"
+  },
+  {
+    "Id": 104,
+    "Name": "REST",
+    "Tag": "api"
+  },
+  {
+    "Id": 105,
+    "Name": "JQuery",
+    "Tag": "javascript"
+  },
+  {
+    "Id": 106,
+    "Name": "LINQ",
+    "Tag": "linq"
+  },
+  {
+    "Id": 107,
+    "Name": "jQuery",
+    "Tag": "javascript"
   }
 ];

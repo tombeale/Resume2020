@@ -1,10 +1,10 @@
-﻿window.tagData = [
+﻿window.tagData = 
 	".Net MVC",
 	".Net Core",
 	".Net Blazor",
 	"AJAX",
 	"Angular",
-	".Net API",
+	"ASP.Net API",
 	"ASP (Classic)",
 	"ASP.Net",
 	"ASPX",
