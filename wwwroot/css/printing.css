@@ -19,9 +19,10 @@
 
     .placeholder {
         page-break-after: avoid;
+        page-break-before: avoid;
     }
-    
-    .section {
+
+    .section, .company-overview {
         page-break-before: avoid;
     }
 
@@ -30,7 +31,6 @@
     }
 
     .keep-together {
-        page-break-inside: avoid;
         page-break-after: avoid;
     }
 
@@ -40,8 +40,12 @@
 
     .divider {
         page-break-after: avoid;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    div.web-only {
+        display: none;
     }
 
     .web-only {
@@ -50,6 +54,23 @@
 
     #main-page-body {
         top: .5in;
+    }
+
+    .tech-body {
+        padding-top: 0;
+        line-height: 200%;
+    }
+
+    .tech-print-header {
+        padding-top: 1em;
+    }
+
+    a, .lang-link {
+        color: black;
+    }
+
+    ul li {
+        color: black;
     }
 
 }

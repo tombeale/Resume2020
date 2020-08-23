@@ -40,7 +40,7 @@ else
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        string Title = (TechData != null) ? TechData.Name : "Not Found";
+        string Title = (TechData != null) ? $"{TechData.Name}|{TechData.BaseYear}" : "Not Found";
 
         await SetTitle(Title);
     }

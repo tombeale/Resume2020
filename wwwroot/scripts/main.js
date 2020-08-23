@@ -55,7 +55,20 @@ window.anchorLink = {
 }
 
 function setTitle(title) {
-	var element = document.getElementById("tech-title")
-	element.innerHTML = title;
+	var args = title.split("|");
+	var year;
+	title = args[0];
+	if (args.length > 0) {
+		year = args[1].replace(/[^0-9]/g, "");
+		if (year != "") {
+			var currentYear = new Date().getFullYear();
+			var baseYear = parseInt(year, 10);
+			if (baseYear > 1970) {
+				var years = currentYear - baseYear;
+				$("#years-exp").text("~" + years + " years");
+			}
+        }
+    }
+	$(".tech-title").text(title);
 }
 

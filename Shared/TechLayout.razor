@@ -1,5 +1,15 @@
 ﻿@inherits LayoutComponentBase
 <link rel="stylesheet" type="text/css" href="/css/techdetails.css">
-
+<div class="print-only tech-print-header">
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <b class="primary">Tom Beale</b><br />
+                Experience: <b class="tech-title"></b>
+            </td>
+            <td id="years-exp" style="text-align: right; vertical-align: bottom;font-size: 80%"></td>
+        </tr>
+    </table>
+</div>
 <div class="main">@Body</div>
-<div class="tech-header"><label class="tech-label">Experience:</label> <span id="tech-title"></span></div>
+<div class="tech-header web-only"><label class="tech-label">Experience:</label> <span style="color: " class="tech-title"></span></div>
