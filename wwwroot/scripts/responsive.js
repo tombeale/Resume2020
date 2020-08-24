@@ -47,5 +47,11 @@ function scrollImage(scrollPosition) {
 		top = "-" + parseInt(scrollPosition / 4.5, 10) + "px";
 		obj.style.top = top;
 	}
+	var txtObj = document.getElementById("main-image-text");
+	var txtTop;
+	if (txtObj) {
+		txtTop   = parseInt(scrollPosition / 2, 10) + "px";
+		txtObj.style.top   = txtTop;
+	}
 }
 

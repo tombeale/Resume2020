@@ -305,12 +305,16 @@ li {
 	transition:         top .5s;  
 }
 
+#main-image-text {
+	position: relative;
+}
+
 #responsive-menu {
-	display:  none;
+	display: none;
 	position: fixed;
-	width:    100%;
-	top:      0;
-	left:     0;
+	width: 100%;
+	top: 0;
+	left: 0;
 	background-color: white;
 }
 
