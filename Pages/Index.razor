@@ -50,9 +50,9 @@
     <a href="#top"><img id="main-nav-logo" class="nav-logo" src="images/TomBeale02.png" /></a>
     <div id="menu" class="menusec"><MenuLinks Anchors="@Anchors" /></div>
 </div>
-<div id="responsive-menu"></div>
+<ResponsiveMenu Anchors="@Anchors" />
 
-@code {
+    @code {
 
     protected Anchors Anchors = new Anchors();
 
@@ -73,4 +73,4 @@
 
     }
 
-}
+    }

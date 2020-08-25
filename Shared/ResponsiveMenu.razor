@@ -1,0 +1,38 @@
+﻿@using Resume2020.Data
+@using Resume2020.Models
+@inject NavigationManager NavManager
+
+<div id="responsive-menu">
+    <table id='mobile-menu' cellspacing='0' callpadding='0' border='0' width='100%'>
+        @foreach (var anchor in Anchors.AnchorList)
+        {
+            tag = $"#{@anchor.Tag}";
+            <tr class='menurow'>
+                <td class='menucell'>
+                    <AnchorTag Width="100%" href='@tag'>@anchor.Caption</AnchorTag>
+                </td>
+            </tr>
+        }
+     </table>
+</div>
+@code {
+    [Parameter]
+    public Anchors Anchors { get; set; }
+
+    string sep = " | ";
+    string tag;
+    string[] items;
+
+    protected void menuClick(string tag)
+    {
+        NavManager.NavigateTo($"#{tag}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
+
+
+
+}

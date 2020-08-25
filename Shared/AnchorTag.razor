@@ -30,10 +30,13 @@
     [Inject]
     protected IJSRuntime JsInterop { get; set; }
 
+    string Style = "";
+
 
     protected override void OnParametersSet()
     {
         string href = null;
+        base.OnParametersSet();
         if (this.Attributes.ContainsKey("href"))
         {
             href = $"{this.Attributes["href"]}";
@@ -43,7 +46,10 @@
                 this.preventDefault = true;
             }
         }
-        base.OnParametersSet();
+        if (this.Attributes.ContainsKey("Width"))
+        {
+            Style = $"width: {this.Attributes["Width"]};";
+        }
     }
 
     private async Task AnchorOnClickAsync()
@@ -51,9 +57,10 @@
         if (!string.IsNullOrEmpty(this.targetId))
         {
             await this.JsInterop.InvokeVoidAsync("anchorLink.scrollIntoView", this.targetId);
+            await this.JsInterop.InvokeVoidAsync("clearMenu");
         }
     }
 
 }
 
-<a @attributes="this.Attributes" @onclick="this.AnchorOnClickAsync" @onclick:preventDefault="@this.preventDefault">@this.ChildContent</a>
+<a style="@Style" @attributes="this.Attributes" @onclick="this.AnchorOnClickAsync" @onclick:preventDefault="@this.preventDefault">@this.ChildContent</a>

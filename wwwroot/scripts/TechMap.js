@@ -5,14 +5,14 @@ var techMapData = [
     "Tag": "ajax"
   },
   {
-    "Id": 74,
-    "Name": "Angular",
-    "Tag": "jstools"
-  },
-  {
     "Id": 79,
     "Name": "C#",
     "Tag": "c"
+  },
+  {
+    "Id": 80,
+    "Name": "CSS",
+    "Tag": "css"
   },
   {
     "Id": 81,
@@ -37,7 +37,7 @@ var techMapData = [
   {
     "Id": 88,
     "Name": "TypeScript",
-    "Tag": "jstools"
+    "Tag": "typescript"
   },
   {
     "Id": 89,
@@ -97,11 +97,11 @@ var techMapData = [
   {
     "Id": 105,
     "Name": "JQuery",
-    "Tag": "jstools"
+    "Tag": "jquery"
   },
   {
     "Id": 107,
     "Name": "jQuery",
-    "Tag": "javascript"
+    "Tag": "jquery"
   }
 ];
