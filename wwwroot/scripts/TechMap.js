@@ -1,8 +1,33 @@
 var techMapData = [
   {
+    "Id": 70,
+    "Name": ".Net MVC",
+    "Tag": "dotnet"
+  },
+  {
+    "Id": 71,
+    "Name": ".Net Core",
+    "Tag": "dotnet"
+  },
+  {
+    "Id": 72,
+    "Name": ".Net Blazor",
+    "Tag": "dotnet"
+  },
+  {
     "Id": 73,
     "Name": "AJAX",
     "Tag": "ajax"
+  },
+  {
+    "Id": 77,
+    "Name": "ASP.Net",
+    "Tag": "dotnet"
+  },
+  {
+    "Id": 78,
+    "Name": "ASPX",
+    "Tag": "dotnet"
   },
   {
     "Id": 79,
@@ -50,6 +75,11 @@ var techMapData = [
     "Tag": "vb"
   },
   {
+    "Id": 92,
+    "Name": "Linq",
+    "Tag": "linq"
+  },
+  {
     "Id": 94,
     "Name": "VB.Net",
     "Tag": "vb"
@@ -86,7 +116,7 @@ var techMapData = [
   },
   {
     "Id": 103,
-    "Name": ".Net WebAPI",
+    "Name": ".Net WebApi",
     "Tag": "ajax"
   },
   {
@@ -100,8 +130,28 @@ var techMapData = [
     "Tag": "jquery"
   },
   {
+    "Id": 106,
+    "Name": "LINQ",
+    "Tag": "linq"
+  },
+  {
     "Id": 107,
     "Name": "jQuery",
     "Tag": "jquery"
+  },
+  {
+    "Id": 108,
+    "Name": ".Net API",
+    "Tag": "ajax"
+  },
+  {
+    "Id": 109,
+    "Name": "ADO",
+    "Tag": "sql"
+  },
+  {
+    "Id": 110,
+    "Name": "ODBC",
+    "Tag": "sql"
   }
 ];

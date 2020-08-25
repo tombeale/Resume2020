@@ -21,10 +21,6 @@ TagList.prototype.resolve = function () {
     });
 }
 
-TagList.prototype.genTag = function (name) {
-    return "k-" + name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-}
-
 TagList.prototype.resolveElement = function (element) {
     var text = $(element).html();
     for (let a in this.list) {
@@ -34,5 +30,5 @@ TagList.prototype.resolveElement = function (element) {
         tooltip = tooltip.replace(/#N#/g, name);
         text = text.replace(name, tooltip);
     }
-    $(element).html(text)
+    $(element).html(text);
 }
