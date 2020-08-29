@@ -1,0 +1,13 @@
+﻿<span style="display: block; height: @(Height);" />
+
+@code {
+    [Parameter]
+    public string Height { get; set; } = "6px";
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+    }
+
+}

@@ -55,3 +55,12 @@ function setTitle(title) {
 	$(".tech-title").text(title);
 }
 
+function showEgg() {
+	var eggFrame = document.getElementById("eeg-frame");
+	if (eggFrame) {
+		showOverlay();
+		eggFrame.src = "eegg/eeg.html";
+		$(eggFrame).fadeIn(300);
+    }
+}
+

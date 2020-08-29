@@ -56,11 +56,26 @@ li {
     padding-left: 8px;
 }
 
+li.sub-list {
+    margin-top:    2px;
+    margin-bottom: 2px;
+}
+
 .tech-list-spacer {
     display: block;
-    height:  6px;
+    height: 6px;
 }
 
 b.primary {
     font-size: 120%;
+}
+
+#eeg-frame {
+    width: 320px;
+    height: 330px;
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    overflow: hidden;
+    cursor: pointer;
 }

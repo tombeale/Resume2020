@@ -1,5 +1,6 @@
 ﻿@layout TechLayout
 @page "/LangDetails/{Tag}"
+@using System.Text.RegularExpressions
 @using Resume2020.Data
 @using Resume2020.Models
 
@@ -20,7 +21,6 @@ else
 {
     <b>No Details Found</b>
 }
-
 @code {
     [Parameter]
     public string Tag { get; set; }
@@ -34,7 +34,38 @@ else
         var Data = new TechnologyData(@"wwwroot\scripts\Techologies.json");
         TechData = Data.Technologies.Where(t => t.Key.ToLower() == Tag.ToLower()).FirstOrDefault();
 
+        bool r = true;
+        while (r)
+        {
+            r = resolveList(TechData);
+        }
+        
         if (!String.IsNullOrEmpty(TechData?.Text)) Paras = TechData.Text.Split("<p>").ToList();
+
+
+    }
+
+
+    bool resolveList(TechItem details)
+    {
+        string text = details.Text;
+
+        int begin = text.IndexOf("<list>");
+        if (begin < 0) return false;
+
+        int end = text.IndexOf("</list>");
+        if (end < begin) return false;
+
+        string front = text.Substring(0, begin);
+        string back  = text.Substring(end + 7);
+
+        string section = text.Substring(begin + 6, (end - begin) - 6);
+        Regex regex = new Regex(@"\*");
+        section = regex.Replace(section, "<li class='sub-list'>");
+
+        details.Text = $"{front}<ul>{String.Join("\n", section)}</ul>{back}";
+
+        return true;
     }
 
 

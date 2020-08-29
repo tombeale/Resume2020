@@ -56,8 +56,7 @@
         top: .5in;
     }
 
-    .tech-body {
-        padding-top: 0;
+    div.tech-body, div.tech-para {
         line-height: 200%;
     }
 

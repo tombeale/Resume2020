@@ -50,6 +50,11 @@ var techMapData = [
     "Tag": "ef"
   },
   {
+    "Id": 84,
+    "Name": "HTML",
+    "Tag": "html"
+  },
+  {
     "Id": 85,
     "Name": "JavaScript",
     "Tag": "javascript"
