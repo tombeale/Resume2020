@@ -56,10 +56,10 @@
         top: .5in;
     }
 
-    div.tech-body, div.tech-para {
+/*    div.tech-body, div.tech-para {
         line-height: 200%;
     }
-
+*/
     .tech-print-header {
         padding-top: 1em;
     }
